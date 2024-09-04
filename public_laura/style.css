@@ -1,0 +1,106 @@
+:root {
+  --vh: 1vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  /* background-color: #4AA3A2;     */
+}
+body {
+  cursor: url(./scalpel_9888271.png), auto;
+  background-image: no-repeat;
+  min-height: calc(var(--vh, 1vh) * 150);
+  overflow-x: hidden;
+  background: linear-gradient(109.6deg, rgb(234, 211, 61) 11.2%, rgb(239, 121, 193) 54.5%, rgb(228, 107, 157) 99.6%);
+}
+li {
+  background: linear-gradient(109.6deg, rgb(234, 211, 61) 11.2%, rgb(239, 121, 193) 54.5%, rgb(228, 107, 157) 99.6%);
+  border: double #e8aabe 5px;
+}
+
+div#logo {
+  padding: 0 4px;
+  display: flex;
+  align-items: center;
+}
+div#logo > img {
+  height: 80px;
+}
+
+nav {
+  flex-wrap: wrap;
+  width: calc(100% - 10px);
+  background-color: #a7e0e0;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: double #e8aabe 5px;
+  position: fixed;
+}
+
+ul#nav {
+  display: none;
+}
+ul#nav-mobile {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(var(--vh, 1vh) * 100);
+  background-color: rgba(234, 61, 211, 0.477);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20vw;
+  justify-content: space-evenly;
+  align-items: center;
+  transform: translate(100%);
+  transition: all 2s;
+  border-radius: 0 0 0 50px;
+}
+h1 {
+  padding: 10px;
+  color: WHITE;
+  text-align: center;
+  font-size: 72px;
+  font-family: 'Protest Guerrilla', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+#hamburger {
+  padding: 0 4px;
+  display: flex;
+  height: 50px;
+  width: 50px;
+  flex-direction: column;
+  justify-content: space-around;
+  background: #a7e0e000;
+  z-index: 1;
+  cursor: pointer;
+}
+#hamburger > span {
+  background-color: pink;
+  height: 15px;
+  width: 50px;
+  border-radius: 50px;
+  border: white solid 2px;
+}
+#hamburger > #milieu {
+  background-color: pink;
+}
+a {
+  font-size: 20px;
+  font-family: 'Protest Guerrilla', sans-serif;
+}
+@media only screen and (min-width: 640px) {
+  ul#nav {
+    height: 30px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+  }
+  div#hamburger {
+    display: none;
+  }
+}

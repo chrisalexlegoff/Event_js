@@ -1,0 +1,12 @@
+services:
+  web:
+    build: ./front
+    container_name: monsite
+    ports:
+      - '8080:80'
+    volumes:
+      - ./public/:/usr/share/nginx/html
+
+networks:
+  default:
+    name: monreseau

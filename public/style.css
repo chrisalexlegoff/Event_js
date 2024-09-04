@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+:root {
+  --vh: 1vh;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+main {
+  min-height: calc(var(--vh, 1vh) * 100);
+  padding: 0 8px;
+  /* padding: 4em 8px; */
+}
+
+div#logo {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  /* padding: 8px; */
+  display: flex;
+  justify-content: space-between;
+  background: #b296965b;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+ul#nav {
+  display: none;
+}
+
+ul#nav-mobile {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  /* min-height: 100vh; */
+  /* height: 100%;
+  /* background: #000; */
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 40vw;
+  justify-content: space-around;
+  align-items: center;
+  transform: translate(100%);
+  background: #b296965b;
+}
+
+/* ul#nav-mobile > li {
+  margin: 4% 0;
+} */
+
+div#hamburger {
+  padding: 8px;
+  height: 35px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  cursor: pointer;
+}
+
+div#hamburger > span {
+  display: block;
+  width: 30px;
+  height: 4px;
+  background: black;
+  border-radius: 8px;
+}
+
+@media only screen and (min-width: 640px) {
+  ul#nav {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  div#hamburger {
+    display: none;
+  }
+}
